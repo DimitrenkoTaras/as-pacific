@@ -2200,6 +2200,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  row-gap: 80px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0px -20px;
@@ -2207,13 +2208,9 @@ h6 {
 
 .speakers__card {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.333%;
-          flex: 0 0 33.333%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   padding: 0px 20px;
-}
-
-.speakers__card:not(:last-child) {
-  margin: 0px 0px 40px 0px;
 }
 
 .speakers-card {
@@ -2334,52 +2331,13 @@ h6 {
   margin: 0px 0px 20px 0px;
 }
 
-.ticket-frame__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 55px;
-  text-transform: uppercase;
-  font-size: 36px;
-  line-height: 125%;
-  color: #263E56;
-  margin: 0px 0px 35px 0px;
-}
-
-.ticket-frame__subtitle {
-  font-weight: 800;
-}
-
-.ticket-frame__text {
-  font-weight: 600;
-}
-
 .ticket-frame__price {
   font-weight: 700;
+  font-size: 54px;
+  line-height: 124%;
+  text-transform: uppercase;
   color: #CC2946;
-}
-
-.ticket-frame__old-price {
-  position: relative;
-  display: inline-block;
-  font-size: 28px;
-}
-
-.ticket-frame__old-price::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #CC2946;
+  margin: 0px 0px 24px 0px;
 }
 
 .ticket-frame__btn {
@@ -2395,9 +2353,11 @@ h6 {
 }
 
 .ticket-frame__description {
+  max-width: 600px;
   color: #263E56;
   font-size: 18px;
   line-height: 122%;
+  margin: 0px auto;
 }
 
 .ticket-frame__description a {
@@ -2620,7 +2580,7 @@ h6 {
 
 @media (min-width: 380px) {
   .ticket__card {
-    padding-left: 30px;
+    padding: 0px 25px;
   }
 }
 
@@ -2890,12 +2850,6 @@ h6 {
     margin: 0px 0px 15px 0px;
   }
 
-  .speakers__card {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-  }
-
   .ticket__card {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -3155,12 +3109,16 @@ h6 {
   .advantages__title {
     font-size: 28px;
   }
+
+  .speakers__frame {
+    padding: 35px 35px 55px 35px;
+  }
 }
 
 @media (max-width: 767.98px) {
   ._container {
     max-width: none;
-    padding: 0 10px;
+    padding: 0 25px;
   }
 
   .header-menu {
@@ -3355,7 +3313,11 @@ h6 {
   }
 
   .speakers__frame {
-    padding: 35px 24px 50px 24px;
+    padding: 35px 24px 55px 24px;
+  }
+
+  .speakers__cards {
+    row-gap: 40px;
   }
 
   .speakers__card {
@@ -3370,10 +3332,6 @@ h6 {
 
   .ticket-frame__title {
     font-size: 36px;
-  }
-
-  .ticket-frame__row {
-    font-size: 27px;
   }
 
   .registration__subtitle {
@@ -3661,25 +3619,17 @@ h6 {
   .ticket-frame__title {
     font-size: 24px;
     line-height: 125%;
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 16px 0px;
   }
 
-  .ticket-frame__row {
-    gap: 40px;
-    font-size: 22px;
-    line-height: 127%;
-    margin: 0px 0px 25px 0px;
-  }
-
-  .ticket-frame__text {
-    font-size: 17px;
-  }
-
-  .ticket-frame__old-price {
-    font-size: 18px;
+  .ticket-frame__price {
+    font-size: 32px;
+    line-height: 125%;
+    margin: 0px 0px 16px 0px;
   }
 
   .ticket-frame__btn {
+    padding: 0px 14px;
     min-height: 43px;
     font-size: 18px;
     line-height: 122%;
@@ -3745,13 +3695,13 @@ h6 {
   .event__btn {
     font-size: 14px;
   }
-
-  .ticket-frame__row {
-    gap: 20px;
-  }
 }
 
 @media (max-width: 350px) {
+  ._container {
+    padding: 0 10px;
+  }
+
   .course-scheme__header {
     gap: 31px;
   }
